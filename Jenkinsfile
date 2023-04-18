@@ -4,7 +4,7 @@ pipeline {
         
   
      
-    stage('Build') {
+    stage('Nams') {
       steps {
         sh 'npm install'
          sh 'npm start'
