@@ -1,14 +1,17 @@
+
+
+
 pipeline {
   agent any
+
+  tools {nodejs "nodejs"}
+
   stages {
-        
-  
-     
-    stage('Nams') {
+    stage('Example') {
       steps {
-        sh 'npm install'
-         sh 'npm start'
+        sh 'npm i'
+        sh 'npm start'
       }
-    }  
+    }
   }
 }
