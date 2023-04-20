@@ -1,26 +1,16 @@
-
-
-
 pipeline {
-  agent {
-        docker {
-            image 'node:6-alpine'
-            args '-p 3000:3000'
+    agent any
+    tools {nodejs "node"}
+    stages{
+      
+        stage("pipeline")
+        {
+            
+            steps{
+                sh 'npm install'
+                sh 'npm start
+                
+            }
         }
     }
-  environment {
-        CI = 'true' 
-    }
-
-  tools {
-        nodejs 'node 7'
-    }
-  stages {
-    stage('Example') {
-      steps {
-        sh 'npm i'
-        sh 'npm start'
-      }
-    }
-  }
 }
